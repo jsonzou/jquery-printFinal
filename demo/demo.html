@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>printFinal 实现打印功能</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="../jquery.printFinal.js"></script>
+<link rel="Stylesheet" type="text/css" href="css.css" />
+
+
+<script language="javascript" type="text/javascript"> 
+$(document).ready(function(){ 
+	  function print(preview){
+	     $("#content").printFinal({
+							preview: preview,//打印预览
+							impcss: true//引入css文件						 
+                           });
+	  
+	  }
+
+      $("#printbtn").click(function(){//打印按钮
+	            print(false);   
+	  });
+
+	  $("#previewbtn").click(function(){//预览按钮
+	            print(true);   
+	  });
+
+}); 
+</script> 
+
+
+
+</head>
+
+<body>
+<div >
+<div class='content'  id='content' style='width:400px;height:200px;overflow:hidden;border:2px solid blue;'>
+          要打印的内容
+
+</div>
+
+<input type='button' name='previewbtn' id='previewbtn' value='预览' />
+<input type='button' name='printbtn' id='printbtn' value='打印' />
+ 
+<br>
+ printFinal是一款基于jQuery的打印插件。支持打印预览。目前版本1.0，作者JsonZou。
+ 下载地址：
+    <br/>github:
+	<br/>oschina:
+
+
+ </div>
+</body>
+</html>
