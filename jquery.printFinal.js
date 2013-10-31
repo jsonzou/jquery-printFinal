@@ -36,7 +36,7 @@
 			 }
 
                //打印容器
-				var $containerDiv=$("<div class='printfinal-container-div-0' style='border:1px solid #ccc;display:block;position:fixed;background:white;left:0px; bottom:0px;width:100%' ></div>");
+				var $containerDiv=$("<div class='printfinal-container-div-0' style='border:1px solid #ccc;display:none;position:fixed;background:white;left:0px; bottom:0px;width:100%' ></div>");
 				//打印容器top
 				var $containerTopDiv=$("<div class='printfinal-container-top-div-0' style='margin:0px 0px 5px 0px; padding:3px;padding-left:5px;color:#333;width:100%;height:25px;line-height:25px;overflow:hidden;border-bottom:1px solid #ddd;text-align:left;font-size:14px;font-weight:bold;'></div>");
 				//打印容器top显示的标题
