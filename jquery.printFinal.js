@@ -20,7 +20,8 @@
     var $e= (this instanceof $) ? this : $(this);
 //1.0打印容器创建
 	        //预览模式下，第一次点击显示预览，第二次点击隐藏预览 
-			if(printOption.preview&&$("div.printfinal-container-div-0").length>0){
+			if(printOption.preview){
+			 if($("div.printfinal-container-div-0").length>0){
 				 if($("div.printfinal-container-div-0").is(":hidden")){
 					  
 					  $("div.printfinal-container-div-0").show();
@@ -29,7 +30,11 @@
 					   $("div.printfinal-container-div-0").hide();
 				 }
 				 return;
+			   }
+			 }else{
+     			 $("div.printfinal-container-div-0").remove();
 			 }
+
                //打印容器
 				var $containerDiv=$("<div class='printfinal-container-div-0' style='border:1px solid #ccc;display:block;position:fixed;background:white;left:0px; bottom:0px;width:100%' ></div>");
 				//打印容器top
